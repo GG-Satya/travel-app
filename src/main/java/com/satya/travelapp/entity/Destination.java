@@ -18,11 +18,11 @@ public class Destination {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(name="name")
+	@Column(name="name", nullable = false, unique = true)
     private String name;
 	
-	@OneToMany(mappedBy = "destination", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Activity> activities;
+	@OneToMany(mappedBy = "destination", cascade = CascadeType.ALL)
+	private List<Activity> activities;
 
 	public Destination() {
 		super();

@@ -8,17 +8,21 @@ import com.satya.travelapp.entity.Passenger;
 import com.satya.travelapp.entity.TravelPackage;
 
 public interface TravelAgencyService {
-	void addDestination(Destination destination);
+	Destination addDestination(Destination destination);
 
-	void addActivity(Activity activity);
+	Activity addActivity(Activity activity);
 
-	void signUpPassenger(Passenger passenger, Activity activity);
+	String signUpPassenger(Passenger passenger, Activity activity);
 
-	void printItinerary(TravelPackage travelPackage);
+	String printItinerary(TravelPackage travelPackage);
 
-	void printPassengerList(TravelPackage travelPackage);
+	String printPassengerList(TravelPackage travelPackage);
 
-	void printPassengerDetails(Passenger passenger);
+	String printPassengerDetails(Passenger passenger);
 
-	void printAvailableActivities(List<Activity> activities);
+	String printAvailableActivities(List<Activity> activities);
+
+	List<Activity> addAllActivity(List<Activity> activities);
+
+	List<Destination> addAllDestination(List<Destination> destinations);
 }

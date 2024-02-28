@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.print.attribute.standard.Destination;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
@@ -19,7 +18,7 @@ public class Activity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(name="name", nullable = false)
+	@Column(name="name", nullable = false, unique = true)
 	@NotBlank(message =  "name can't be blank")
     private String name;
     
@@ -31,13 +30,13 @@ public class Activity {
     private double cost;
     
 	@Column(name="capacity")
-    @Size(min = 0, message="capacity can't be nagative")
+    //@Size(min = 0, message="capacity can't be nagative")
     private int capacity;
     
-    @Column(name="destination")
-    @ManyToOne
-    @JoinColumn(name = "destination_id")
-    private Destination destination;
+ 
+	@ManyToOne
+	@JoinColumn(name = "destination_id", nullable = false)
+	private Destination destination;
     
 	public Activity() {
 		super();
