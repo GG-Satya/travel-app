@@ -13,7 +13,7 @@ Before running the application, ensure you have the following prerequisites inst
 1. Clone the repository to your local machine:
 ```git clone https://github.com/GG-Satya/travel-app.git```
 2. Navigate to the project directory:
-```cd travel-agency```
+```cd travel-app```
 3. Configure the database connection:
 - By default it is set with MYSQL 8
 - Open `src/main/resources/application.properties`.
