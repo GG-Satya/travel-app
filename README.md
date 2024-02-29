@@ -11,7 +11,7 @@ Before running the application, ensure you have the following prerequisites inst
 
 ## Setup
 1. Clone the repository to your local machine:
-```git clone https://github.com/your-username/travel-agency.git```
+```git clone https://github.com/GG-Satya/travel-app.git```
 2. Navigate to the project directory:
 ```cd travel-agency```
 3. Configure the database connection:
